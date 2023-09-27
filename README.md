@@ -18,10 +18,10 @@ Fetch a list of books from an API using RTK Query and Display the cart of books
 * users to search for books based on criteria such as title, author, or genre.
 * filtering options to narrow down the book list based on publication year.
 
-# Add New Book Page
+## Add New Book Page
 * Authenticated users can add a new book by filling out a form.
 
-# Book Details Page
+## Book Details Page
 * When a user clicks on a book  details displays a detailed view of the book.The detailed view of the following information:
 
 * Title
@@ -30,19 +30,19 @@ Fetch a list of books from an API using RTK Query and Display the cart of books
 * Publication Date
 * Commnet
 
-# Buttons to the book details page:
+## Buttons to the book details page:
 * Edit Button
 * Delete Button
 * Add to wish list
 
-# Edit Button and Delete Button
+## Edit Button and Delete Button
 
 * user who created this book will be Edit book and also Delete book
 
-# Add to wish list and Commnet
+## Add to wish list and Commnet
 
 * Authenticated users will be allowed to add this book to the wish list and comments on this book
 
-# MORE FUNCTIONS ARE COMMING 
+### MORE FUNCTIONS ARE COMMING 
 
 ****************************************************************
