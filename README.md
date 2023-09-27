@@ -44,5 +44,9 @@ Fetch a list of books from an API using RTK Query and Display the cart of books
 * Authenticated users will be allowed to add this book to the wish list and comments on this book
 
 ### MORE FUNCTIONS ARE COMMING 
+* profile
+* update Profile
+* PDF Book
+
 
 ****************************************************************
