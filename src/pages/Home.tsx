@@ -17,8 +17,8 @@ export default function Home() {
             Meet Your favorite books
           </p>
           <div className="text-primary mt-20">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-            <p>Cumque quam explicabo nobis consequuntur</p>
+            <p>Opening a book is like stepping into a new world</p>
+            <p> where the pages become windows to endless adventures and knowledge.</p>
           </div>
           <Button className="mt-10" asChild>
             <Link to="/all-books">Brows all Books</Link>
