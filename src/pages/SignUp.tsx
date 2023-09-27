@@ -25,10 +25,10 @@ export function SignUp({ className, ...props }: UserAuthFormProps) {
     formState: { errors },
   } = useForm<SignupFormInputs>();
 
-   const dispatch =useAppDispatch()
+  const dispatch = useAppDispatch()
 
   const onSubmit = (data: SignupFormInputs) => {
-    dispatch( createUser({email:data.email,password:data.password}))
+    dispatch(createUser({ email: data.email, password: data.password }))
 
   };
 
@@ -44,6 +44,7 @@ export function SignUp({ className, ...props }: UserAuthFormProps) {
                 Email
               </Label>
               <Input
+                className='text-slate-950'
                 id="email"
                 placeholder="name@example.com"
                 type="email"
@@ -54,6 +55,7 @@ export function SignUp({ className, ...props }: UserAuthFormProps) {
               />
               {errors.email && <p>{errors.email.message}</p>}
               <Input
+                className='text-slate-950'
                 id="password"
                 placeholder="your password"
                 type="password"
@@ -63,6 +65,7 @@ export function SignUp({ className, ...props }: UserAuthFormProps) {
               />
               {errors.password && <p>{errors.password.message}</p>}
               <Input
+                className='text-slate-950'
                 id="password"
                 placeholder="confirm password"
                 type="password"
@@ -70,7 +73,7 @@ export function SignUp({ className, ...props }: UserAuthFormProps) {
                 autoCorrect="off"
               />
             </div>
-            <Button  className='w-1/5 m-auto'>Create Account</Button>
+            <Button className='w-1/5 m-auto'>Create Account</Button>
           </div>
         </form>
         <div className="relative">

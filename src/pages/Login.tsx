@@ -53,6 +53,7 @@ export function Login({ className, ...props }: UserAuthFormProps) {
                 Email
               </Label>
               <Input
+              className='text-slate-950'
                 id="email"
                 placeholder="name@example.com"
                 type="email"
@@ -63,6 +64,7 @@ export function Login({ className, ...props }: UserAuthFormProps) {
               />
               {errors.email && <p>{errors.email.message}</p>}
               <Input
+              className='text-slate-950'
                 id="password"
                 placeholder="your password"
                 type="password"
