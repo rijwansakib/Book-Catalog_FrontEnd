@@ -37,7 +37,7 @@ export default function Home() {
           The top 10 recently added books
           </h1>
           <div className='mt-10'>
-            <Books></Books>
+            <Books/>
           </div>
           <Button className="mt-10" asChild>
             <Link to="/all-books">Brows all Books</Link>

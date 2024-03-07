@@ -35,21 +35,17 @@ export default function BooksDetails() {
 
     return (
         <div>
-            <h1 className='text-5xl text-center font-serif mt-5'>Book Details</h1>
             {books ? (
                 <>
-                    <div className='flex items-center justify-center mt-16 gap-x-16' key={books.id}>
-                        <div>
-                            <img className='w-80' src={books.image} alt="book" />
+                    <div className='bg-sky-800 h-96 relative'>
+                        <div className='absolute bottom-[-25%] left-[45%]'>
+                            <img className='w-64 h-72  border' src={books.image} alt="book" />
                         </div>
-                        <div className='mt-10'>
-                            <h1 className='font-bold text-3xl'>Title:{books?.title}</h1>
-                            <p className='font-bold text-xl'>Author:{books?.author}</p>
-                            <p className='font-bold text-xl'>Genre:{books?.genre}</p>
-                            <p className='font-bold text-xl'>PublicationYear:{books?.publicationDate}</p>
-                        </div>
-
                     </div>
+
+
+
+
                     {/* ... other code */}
                     <div className='flex justify-end gap-4 mb-10 p-10'>
                         {user.email &&
@@ -77,10 +73,8 @@ export default function BooksDetails() {
                     </div>
 
                     <div className='bg-slate-100 shadow-gray-100 '>
-                        <h1 className='font-bold text-4xl text-center p-5'>Book Summary</h1>
-                        <div className='w-5/6 m-auto mt-10 mb-20'>
-                            <p className='font-semibold text-lg p-10 '>{books?.summary}</p>
-                        </div>
+                        <h1 className='font-bold text-lg px-2'>Book Summary</h1>
+                            <p className='font-semibold text-md px-2 py-2'>{books?.summary}</p>
                     </div>
 
                 </>
@@ -93,7 +87,6 @@ export default function BooksDetails() {
             <ReviewBooks></ReviewBooks>
 
         </div>
-
     );
 }
 

@@ -1,32 +1,30 @@
-import { Button } from '@/components/ui/button'
 import { IBooks } from '@/types/globalTypes'
 import { Link } from 'react-router-dom'
 
 export default function BookCard({ book }: { book: IBooks }) {
     return (
-        <div key={book.id} className="rounded-xl  flex flex-col 
-         justify-between p-5 overflow-hidden 
-         shadow-md border border-gray-100 hover:shadow-2xl
-          hover:scale-[102%] transition-all gap-2 items-center">
+        <div key={book.id} className="border rounded">
+            <div className='flex justify-center'>
+                <img className='w-full h-72 object-fill' src={book.image} alt="book" />
+            </div>
+            <div className='py-2 px-2 text-base font-semibold '>
+                <h1 >{book.title}</h1>
+            </div>
+            <div className='py-2 px-2 text-sm '>
+                <p>Author: <span className='font-semibold'>{book.author}</span></p>
+                <p>Genre: <span className='font-semibold'>{book.genre}</span></p>
+                <p>Publication Date: <span className='font-semibold'>{book.publicationDate}</span></p>
+            </div>
 
-            <img className='w-2/3' src={book.image} alt="book" />
-            <h1 className="text-xl font-semibold">{book.title}</h1>
-            <p>
-                <span className="text-gray-500 font-bold">Author: {book.author}</span>
-            </p>
-            <p>
-                <span className="text-gray-500 font-bold">Genre: {book.genre}</span>
-            </p>
-            
-            <p>
-                <span className="text-gray-500 font-bold">Publication Date: {book.publicationDate}</span>
-            </p>
-
-            <Link to={`/book-details/${book.id}`}>
-                <Button variant="default">
-                    See Details
-                </Button>
-            </Link>
+            <div className='px-2 py-1'>
+                <Link to={`/book-details/${book.id}`}>
+                    <button className='text-base px-2 py-1 border text-white bg-blue-500 rounded
+                    hover:bg-blue-900
+                    '>
+                        See Details
+                    </button>
+                </Link>
+            </div>
 
         </div>
     )

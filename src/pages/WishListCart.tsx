@@ -39,18 +39,17 @@ export default function WishListCart() {
                             const bookWishlistId = wishlist[index];
                             if (loginUser === wishlistEmail[index]) {
                                 return (
-                                    <div className="border h-36 p-3 flex  rounded-md" key={book.id}>
-                                        <div className="border-r shrink-0">
-                                            <img src={book?.image} alt="" className="h-full" />
-                                        </div>
-                                        <div className="px-2 w-full flex flex-col gap-3">
-                                            <h4 className="text-sm font-semibold self-center">{book?.title}</h4>
-                                            <p className="text-sm self-center">Author: {book?.author}</p>
-                                        </div>
-                                        <div className="border-l pl-5 flex flex-col justify-between">
+                                    <div key={book.id} className="flex justify-between items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                        <img className="rounded-t-lg md:h-auto w-24 object-contain  md:rounded-none md:rounded-s-lg" src={book?.image} alt="" />
+                                        <div className="">
+                                            <h5 className="text-sm font-bold tracking-tight text-gray-900 dark:text-white">{book?.title.slice(0,10)+'...'}</h5>
+                                            <p className="font-normal text-gray-700 dark:text-gray-400">{book?.author}</p>
+                                        </div> 
+                                        <div className="px-1">
                                             <DeleteWish key={index} wishlistId={bookWishlistId} />
                                         </div>
                                     </div>
+
                                 );
                             } else {
                                 return null;
